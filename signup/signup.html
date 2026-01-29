@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <link href="./signUpStyle.css" rel="stylesheet">
+    <script src="./signUpFunction.js"></script>
+</head>
+<body>
+    <div id="signup">
+        <div id="inputHolder">
+            <h1 class="heading">Personal Task Manager</h1>
+
+            <!-- First Name-->
+            <div class="inputHeader">
+                <h3>First Name</h3>
+                <h2>*</h2>
+            </div>
+            <input id='fName' class="input" type="text" placeholder="Enter First Name Here">
+
+            <!-- Last Name -->
+            <div class="inputHeader">
+                <h3>Last Name</h3>
+                <h2>*</h2>
+            </div>
+            <input id='lname' class="input" type="text" placeholder="Enter Last Name Here">
+
+            <!-- Grade Level -->
+            <div class="inputHeader">
+                <h3>Grade Level</h3>
+            </div>
+             <select id='gradeSelect' name="Grade Level">
+                <option>Freshman</option>
+                <option>Sophmore</option>
+                <option>Junior</option>
+                <option>Senior</option>
+            </select>
+
+            <!-- Email -->
+            <div class="inputHeader">
+                <h3>Email</h3>
+                <h2>*</h2>
+            </div>
+            <input id='email' class="input" type="email" placeholder="username@pct.edu">
+
+            <!-- Password -->
+            <div class="inputHeader">
+                <h3>Password</h3>
+                <h2>*</h2>
+            </div>
+            <input id="thePassword" class="input" type="password" placeholder="New Account Password" oninput="passwordChecker()">
+            <ul>
+                <li id="atLeast8">Must Be At Least 8 Characters</li>
+                <li id="conDigit">Must Contain At Least 1 Digit</li>
+                <li id="conSymbol">Must Contain At Least 1 Special Character</li>
+            </ul>
+
+            <!-- Login Button -->
+            <button id="signupButton" onclick="submitData()">Sign Up</button>
+
+        </div>
+</body>
+</html>
